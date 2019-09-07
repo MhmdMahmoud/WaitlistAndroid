@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dialog_icon"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="65dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:padding="15dp"
+        android:background="@drawable/dialog_background_shape">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="25dp">
+
+            <EditText
+                android:id="@+id/dialog_gName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".9"
+                android:hint="@string/guest_name"
+                android:textSize="20sp"
+                android:inputType="text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/dialog_gNumber"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:hint="@string/_00"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/dialog_back_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:text="@string/back"
+                android:textStyle="bold"
+                android:textColor="@color/colorwhite"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/dialog_button"/>
+            <Button
+                android:id="@+id/dialog_add_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:text="@string/add_guest"
+                android:textStyle="bold"
+                android:textColor="@color/colorwhite"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/dialog_button"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
